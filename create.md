@@ -1,6 +1,6 @@
 # Get window info
 
-`xwininfo``
+`xwininfo`
 
 # Capture window
 
