@@ -9,6 +9,8 @@
 # Convert capture to gif
 
 ```
-ffmpeg -ss 3 -t 20 -i out.avi -filter_complex [0:v] palettegen palette.png
-ffmpeg -ss 3 -t 20 -i out.avi -i palette.png -filter_complex [0:v][1:v] paletteuse out.gif
+ffmpeg -ss 3 -t 52 -i out.avi \                                                                                                 17s 10:16:38
+    -vf "fps=10,scale=540:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" \
+    -loop 0 out.gif
 ```
+https://superuser.com/questions/556029/how-do-i-convert-a-video-to-gif-using-ffmpeg-with-reasonable-quality
